@@ -65,14 +65,14 @@
      *  If the name is not in the list, does nothing and returns false. */
     public boolean removeFollowee(String name) {
         int index = -1;
-        if (index == -1) 
-        return false;
     for (int i = 0; i < fCount; i++) {
         if (follows[i].equals(name)) {
             index = i;
             break;
         }
     }
+     if (index == -1) 
+        return false;
     for (int i = index; i < fCount - 1; i++) {
         follows[i] = follows[i + 1];
     }
